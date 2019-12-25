@@ -19,7 +19,8 @@ const helpCommandsShort = [
   "ls 'Show the content of the directory' ",
   "cd directory_name 'Go to the directory_name folder'",
   "cd .. 'Go to the top directory' ",
-  "cat file_name 'View the file_name' "
+  "cat file_name 'View the file_name' ",
+  "TAB 'Use TAB key to auto-complete command or name of file/directory"
 ];
 
 export const help = {
@@ -158,7 +159,7 @@ export const whoami = {
   exec: state => {
     const value = state.settings.user.username;
     return Object.assign({}, state, {
-      history: state.history.concat({ value })
+      history: state.history.concat({ value: 'very_nice_person' })
     });
   }
 };
